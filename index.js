@@ -65,8 +65,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 function is31Flavors(arr) {
   //we need an iff statement to check that the length of the array is 31 falvors if it is we want to return true(boolean)
   //else we want to return false
+  if (arr.length === 31) {
+    return true;
+  } else {
+    return false;
+  }
   /*your code here*/
 }
+console.log("task 3", is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -118,9 +124,11 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/) {
+function getFlavorByIndex(arr, numAtIndex) {
+  return arr[numAtIndex];
   /*your code here*/
 }
+console.log("task 5", getFlavorByIndex(originalFlavors, 5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
