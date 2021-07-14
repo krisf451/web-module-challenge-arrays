@@ -45,9 +45,11 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/) {
+function copy(arr) {
+  return [...arr];
   /*your code here*/
 }
+console.log("task 1", copy(originalFlavors));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
@@ -59,7 +61,10 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
-function is31Flavors(/*your code here*/) {
+//taking 1 parameter which is an aray so I would call it arr
+function is31Flavors(arr) {
+  //we need an iff statement to check that the length of the array is 31 falvors if it is we want to return true(boolean)
+  //else we want to return false
   /*your code here*/
 }
 
@@ -75,9 +80,13 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-function addFlavor(/*your code here*/) {
+function addFlavor(arr, flavor) {
+  //add passed flavor to the array
+  arr.unshift(flavor);
   /*your code here*/
+  return arr;
 }
+console.log("task 3", addFlavor(originalFlavors, "Coffee"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -90,9 +99,13 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/) {
+function removeLastFlavor(arr) {
+  //remove the last item from the array
+  arr.pop();
+  return arr;
   /*your code here*/
 }
+console.log("task 4", removeLastFlavor(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
